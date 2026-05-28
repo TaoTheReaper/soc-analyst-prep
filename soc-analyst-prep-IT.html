@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>CyberTrack v3 — SOC Analyst Yarix</title>
+<title>SOC Analyst Prep — Guida interattiva</title>
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
 <style>
 :root,[data-theme="light"]{
@@ -143,7 +143,7 @@ section{scroll-margin-top:70px}
 
 <div class="app">
 <aside class="sidebar">
-<div class="brand"><span class="logo">⬡ CyberTrack v3</span><button id="themeBtn" class="btn2 btnSm">◐</button></div>
+<div class="brand"><span class="logo">⬡ SOC Prep</span><button id="themeBtn" class="btn2 btnSm">◐</button></div>
 <div class="nav-label">Navigazione</div>
 <a class="nav-btn" href="#sec-overview">📊 Overview</a>
 <a class="nav-btn" href="#sec-triage-how">🔍 Come funziona il triage</a>
@@ -156,8 +156,8 @@ section{scroll-margin-top:70px}
 <a class="nav-btn" href="#sec-final">⏱ Test finale</a>
 <a class="nav-btn" href="#sec-review">✅ Checklist finale</a>
 <div style="margin-top:auto;padding:12px;border-radius:14px;background:var(--surface2);border:1px solid var(--border);font-size:.78rem;color:var(--muted)">
-<strong style="color:var(--text);display:block;margin-bottom:4px">Colloquio domani</strong>
-Samuele Casinelli (Security+ CEH)<br>Antonio Groppo (Yarix SOC)<br><span style="color:var(--primary)">Sei pronto.</span>
+<strong style="color:var(--text);display:block;margin-bottom:4px">Sei pronto?</strong>
+Fai il test finale e punta almeno al 75%.<br><span style="color:var(--primary)">In bocca al lupo!</span>
 </div>
 </aside>
 
@@ -177,9 +177,9 @@ Samuele Casinelli (Security+ CEH)<br>Antonio Groppo (Yarix SOC)<br><span style="
 <section id="sec-overview">
 <div class="g2">
 <div class="panel card">
-<div style="font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#ffd27a">Preparazione colloquio SOC v3</div>
-<h1 style="font-size:1.8rem;line-height:1.1;max-width:20ch">Teoria, trainer interattivi, triage realistico e test cronometrato.</h1>
-<p>Triage SOC con ordinamento manuale, OSI con esercizi, MITRE ATT&CK, 100 porte e timer sul test finale.</p>
+<div style="font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#ffd27a">SOC Analyst — Guida di studio interattiva</div>
+<h1 style="font-size:1.8rem;line-height:1.1;max-width:20ch">Tutto ciò che serve per padroneggiare le competenze SOC Analyst L1: teoria, trainer, triage realistici e test cronometrato.</h1>
+<p>Triage SOC con ordinamento manuale, OSI con esercizi, MITRE ATT&CK, 100 porte e test con timer.</p>
 <div style="display:flex;gap:8px;flex-wrap:wrap"><a class="btn" href="#sec-triage">Vai ai scenari triage</a><a class="btn2" href="#sec-final">Test finale</a></div>
 </div>
 <div class="panel card">
@@ -193,9 +193,9 @@ Samuele Casinelli (Security+ CEH)<br>Antonio Groppo (Yarix SOC)<br><span style="
 </div>
 </div>
 <div class="g3">
-<div class="info-box red"><h3>Intervistatori</h3><div><strong>Samuele Casinelli</strong><div style="color:var(--muted);font-size:.82rem">Security+ &amp; CEH — aspettati domande tecniche vere</div></div><div><strong>Antonio Groppo</strong><div style="color:var(--muted);font-size:.82rem">Yarix SOC analyst</div></div></div>
-<div class="info-box gold"><h3>Formato atteso</h3><div style="color:var(--muted);font-size:.82rem">Domande teoriche + scenari pratici. Con CEH in sala aspettati sia lato offensivo che difensivo. Ragiona a voce.</div></div>
-<div class="info-box green"><h3>Arma segreta</h3><div style="color:var(--muted);font-size:.82rem">scythe-recon su GitHub. Dimostra che sai costruire tool, non solo usarli. Menzionalo se si apre lo spazio.</div></div>
+<div class="info-box red"><h3>La valutazione tecnica</h3><div><strong>Chi ti intervisterà</strong><div style="color:var(--muted);font-size:.82rem">Spesso un SOC analyst senior o un team lead con cert. come CEH, Security+. Aspettati domande teoriche e scenari pratici.</div></div></div>
+<div class="info-box gold"><h3>Formato atteso</h3><div style="color:var(--muted);font-size:.82rem">Domande teoriche + scenari pratici. Ragiona sempre a voce: dimostra il processo mentale, non solo la risposta.</div></div>
+<div class="info-box green"><h3>Differenziati</h3><div style="color:var(--muted);font-size:.82rem">Avere progetti su GitHub, tool Python, CTF writeups o cert. come CompTIA Security+ ti distingue dai candidati L1 generici.</div></div>
 </div>
 </section>
 
@@ -351,7 +351,7 @@ L'attacco c'è ma il SIEM non l'ha visto. Per questo esistono le revisioni perio
 <p>Il framework che tutti i SOC usano per classificare tattiche e tecniche avversarie. Devi saperlo nominare e spiegare a grandi linee.</p>
 <div style="padding:14px;border-radius:14px;background:rgba(90,160,173,.1);border:1px solid rgba(90,160,173,.3);margin-bottom:14px;font-size:.85rem;line-height:1.6">
 <strong style="color:var(--primary)">Cos'è in una frase:</strong> MITRE ATT&CK è una knowledge base pubblica di tattiche, tecniche e procedure (TTP) usate dagli attaccanti reali, organizzate in una matrice. Nasce dall'osservazione di attacchi reali e serve ai SOC per capire <em>come</em> gli avversari si muovono, non solo <em>cosa</em> fanno.<br><br>
-<strong style="color:var(--primary)">Perché lo usa Yarix:</strong> Ogni alert del SIEM può essere mappato su ATT&CK per capire in quale fase dell'attacco ci si trova e cosa aspettarsi come mossa successiva.
+<strong style="color:var(--primary)">Perché lo usano i SOC:</strong> Ogni alert del SIEM può essere mappato su ATT&CK per capire in quale fase dell'attacco ci si trova e cosa aspettarsi come mossa successiva.
 </div>
 <div class="g2" style="margin-bottom:14px">
 <div style="padding:12px;border-radius:12px;background:var(--surface2);border:1px solid var(--border);font-size:.82rem">
@@ -431,7 +431,7 @@ L'attacco c'è ma il SIEM non l'ha visto. Per questo esistono le revisioni perio
 <div class="g2">
 <div class="panel card">
 <h2>Test finale — 20s a domanda</h2>
-<p>10 domande miste da tutti i moduli. Timer reale. Simula il colloquio tecnico.</p>
+<p>10 domande miste da tutti i moduli. Timer reale. Simula una valutazione tecnica reale.</p>
 <div id="timerSection" class="hidden timer-wrap">
 <div class="timer-bar-bg"><div class="timer-bar" id="timerBar"></div></div>
 <div class="timer-lbl" id="timerLbl">20s</div>
@@ -459,7 +459,7 @@ L'attacco c'è ma il SIEM non l'ha visto. Per questo esistono le revisioni perio
 <section id="sec-review">
 <div class="g2">
 <div class="panel card">
-<h2>Domande che ti faranno</h2>
+<h2>Domande chiave da padroneggiare</h2>
 <div style="display:grid;gap:8px;font-size:.83rem">
 <div style="padding:10px;border-radius:10px;background:var(--surface2);border:1px solid var(--border)">Spiegami il modello OSI in 30 secondi.</div>
 <div style="padding:10px;border-radius:10px;background:var(--surface2);border:1px solid var(--border)">Differenza tra TCP e UDP — dammi un esempio per ognuno.</div>
@@ -474,19 +474,19 @@ L'attacco c'è ma il SIEM non l'ha visto. Per questo esistono le revisioni perio
 </div>
 </div>
 <div class="panel card">
-<h2>Checklist colloquio</h2>
+<h2>Checklist finale</h2>
 <div style="display:grid;gap:8px;font-size:.83rem">
-<div style="padding:10px;border-radius:10px;background:rgba(109,170,69,.12);border:1px solid rgba(109,170,69,.3)">✅ Presentati in 60s: EOD + cyber + Python/OSINT + SOC</div>
-<div style="padding:10px;border-radius:10px;background:rgba(109,170,69,.12);border:1px solid rgba(109,170,69,.3)">✅ Menziona scythe-recon se chiedono esperienza pratica</div>
+<div style="padding:10px;border-radius:10px;background:rgba(109,170,69,.12);border:1px solid rgba(109,170,69,.3)">✅ Presentati in 60s: background tecnico, progetti, motivazione</div>
+<div style="padding:10px;border-radius:10px;background:rgba(109,170,69,.12);border:1px solid rgba(109,170,69,.3)">✅ Menziona progetti pratici su GitHub se chiedono esperienza</div>
 <div style="padding:10px;border-radius:10px;background:rgba(109,170,69,.12);border:1px solid rgba(109,170,69,.3)">✅ Ragiona a voce sugli scenari — non rispondere con una parola sola</div>
 <div style="padding:10px;border-radius:10px;background:rgba(109,170,69,.12);border:1px solid rgba(109,170,69,.3)">✅ Malware: isolamento prima, non spegnere</div>
 <div style="padding:10px;border-radius:10px;background:rgba(109,170,69,.12);border:1px solid rgba(109,170,69,.3)">✅ Phishing: mittente, header, link, allegati, sandbox</div>
-<div style="padding:10px;border-radius:10px;background:rgba(109,170,69,.12);border:1px solid rgba(109,170,69,.3)">✅ Chiedi di Egyda e del Cognitive SOC — dimostra interesse</div>
-<div style="padding:10px;border-radius:10px;background:rgba(109,170,69,.12);border:1px solid rgba(109,170,69,.3)">✅ RAL: non scendere sotto 27-28k. Chiedi delle maggiorazioni notturne</div>
-<div style="padding:10px;border-radius:10px;background:rgba(208,154,51,.12);border:1px solid rgba(208,154,51,.3)">⚠ Aggiungi Giorgio Goretti su LinkedIn solo DOPO l'esito</div>
+<div style="padding:10px;border-radius:10px;background:rgba(109,170,69,.12);border:1px solid rgba(109,170,69,.3)">✅ Chiedi dell'ambiente SOC, dei vendor usati, delle opportunità di crescita</div>
+<div style="padding:10px;border-radius:10px;background:rgba(109,170,69,.12);border:1px solid rgba(109,170,69,.3)">✅ Sulla RAL: non sparare per primo. Chiedi del pacchetto completo (maggiorazioni turni, benefit)</div>
+<div style="padding:10px;border-radius:10px;background:rgba(208,154,51,.12);border:1px solid rgba(208,154,51,.3)">⚠ Collegati con i tuoi valutatori su LinkedIn dopo che il processo è concluso</div>
 </div>
 <div style="margin-top:10px;padding:12px;border-radius:12px;background:rgba(90,160,173,.1);border:1px solid rgba(90,160,173,.3);font-size:.82rem">
-<strong style="color:var(--primary)">Struttura Yarix:</strong> Gruppo SeSa (Empoli, quotata) → Var Group → Yarix (cyber/SOC). Partnership Microsoft, accordo Polizia di Stato, R&D Tel Aviv, piattaforma Egyda AI (2024).
+<strong style="color:var(--primary)">Prima di qualsiasi valutazione:</strong> ricerca l'azienda su LinkedIn e sul sito. Capire struttura, clienti, vendor usati (SIEM, EDR) e prodotti propri dimostra interesse genuino.
 </div>
 </div>
 </div>
@@ -540,7 +540,7 @@ const idx=OSI_NAMES.indexOf(name);
 const done=idx<osiStep;
 const btn=document.createElement('button');
 btn.className='osi-label'+(done?' osi-correct':'');
-btn.textContent=(done?'✓ ':'')+name+' (Layer '+(idx+1)+')';
+btn.textContent=(done?'✓ Layer '+(idx+1)+' — ':'')+name;
 btn.disabled=done;
 if(!done) btn.addEventListener('click',()=>{
 if(name===OSI_NAMES[osiStep]){
@@ -958,15 +958,15 @@ const MODULES=[
 {q:'nslookup serve per...',opts:['Cambiare hostname','Query DNS','Montare dischi','Vedere processi'],a:1,ex:'nslookup interroga il DNS per risolvere nomi o IP.'},
 {q:'chown cambia...',opts:['Permessi','Proprietario/gruppo del file','Hostname','Routing'],a:1,ex:'chown = change owner. Cambia chi possiede il file.'},
 ]},
-{id:'yarix',label:'Yarix-specific',tag:'p3',questions:[
+{id:'yarix',label:'SOC & IR avanzato',tag:'p3',questions:[
 {q:'MITRE ATT&CK è principalmente...',opts:['Un firewall hardware','Framework di tattiche e tecniche avversarie','Un SIEM open source','Un protocollo VPN'],a:1,ex:'ATT&CK organizza TTP reali degli avversari in una matrice consultabile.'},
 {q:'MDR significa...',opts:['Managed Detection and Response','Multi Domain Routing','Main Data Recovery','Manual Detection Rules'],a:0,ex:'MDR è un servizio gestito di rilevamento e risposta agli incidenti.'},
-{q:'Egyda è...',opts:['Un SIEM open source','Piattaforma AI anti-attacchi di Yarix (2024)','Un framework di pentest','Un protocollo di auth'],a:1,ex:'Egyda è la piattaforma AI di Yarix che abbatte i tempi di risposta del 40%.'},
 {q:'MSSP vs MDR: MDR è più focalizzato su...',opts:['Solo compliance','Detection e Response attiva','Solo firewall','Solo email security'],a:1,ex:'MDR è più operativo e orientato alla risposta; MSSP è più ampio e passivo.'},
 {q:'Il lifecycle IR NIST parte da...',opts:['Containment','Preparation','Detection','Recovery'],a:1,ex:'Le 6 fasi NIST: Preparation → Detection → Analysis → Containment → Eradication → Recovery.'},
 {q:'FIRST è...',opts:['Un exploit framework','Organizzazione internazionale di incident response','Un tipo di malware','Un SIEM'],a:1,ex:'FIRST = Forum of Incident Response and Security Teams.'},
 {q:'ATT&CK Navigator serve a...',opts:['Bloccare il traffico','Visualizzare copertura di detection sulle tattiche','Fare hash cracking','Scansionare porte'],a:1,ex:'Navigator è il tool visivo per mappare la copertura delle tue regole su ATT&CK.'},
-{q:'Var Group fa parte di...',opts:['Gruppo SeSa','Telecom Italia','Cisco','Accenture'],a:0,ex:'Gruppo SeSa (quotata in borsa, sede Empoli) controlla Var Group → Yarix.'},
+{q:'Threat Intelligence feed serve a...',opts:['Cifrare il traffico','Arricchire alert con contesto su IoC noti','Fare pentest automatico','Sostituire il SIEM'],a:1,ex:'I feed TI (es. abuse.ch, AlienVault OTX) forniscono contesto su IP, domini e hash malevoli.'},
+{q:'SOAR differisce dal SIEM perché...',opts:['È solo per email','Automatizza la risposta agli incidenti','Sostituisce il firewall','È solo open source'],a:1,ex:'SOAR aggiunge automazione e orchestration al SIEM: playbook automatici su alert.'},
 ]},
 ];
 
