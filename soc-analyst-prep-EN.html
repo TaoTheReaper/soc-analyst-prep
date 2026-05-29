@@ -146,18 +146,18 @@ section{scroll-margin-top:70px}
 <div class="brand"><span class="logo">⬡ SOC Prep</span><button id="themeBtn" class="btn2 btnSm">◐</button></div>
 <div class="nav-label">Navigazione</div>
 <a class="nav-btn" href="#sec-overview">📊 Overview</a>
-<a class="nav-btn" href="#sec-triage-how">🔍 How triage works</a>
-<a class="nav-btn" href="#sec-osi">🧱 OSI Model</a>
-<a class="nav-btn" href="#sec-trainer">🎯 CIDR / TCP-UDP Trainer</a>
-<a class="nav-btn" href="#sec-triage">🚨 SOC Triage Scenarios</a>
+<a class="nav-btn" href="#sec-triage-how" id="nav-triage-how">🔍 How triage works</a>
+<a class="nav-btn" href="#sec-osi" id="nav-osi">🧱 OSI Model</a>
+<a class="nav-btn" href="#sec-trainer" id="nav-trainer">🎯 CIDR / TCP-UDP Trainer</a>
+<a class="nav-btn" href="#sec-triage" id="nav-triage">🚨 SOC Triage Scenarios</a>
 <a class="nav-btn" href="#sec-mitre">🗺 MITRE ATT&CK</a>
-<a class="nav-btn" href="#sec-ports">🔌 100 Ports</a>
-<a class="nav-btn" href="#sec-quiz">📝 Module Quiz</a>
+<a class="nav-btn" href="#sec-ports" id="nav-ports">🔌 100 Ports</a>
+<a class="nav-btn" href="#sec-quiz" id="nav-quiz">📝 Module Quiz</a>
 <a class="nav-btn" href="#sec-final">⏱ Final test</a>
-<a class="nav-btn" href="#sec-review">✅ Final Checklist</a>
+<a class="nav-btn" href="#sec-review" id="nav-review">✅ Final Checklist</a>
 <div style="margin-top:auto;padding:12px;border-radius:14px;background:var(--surface2);border:1px solid var(--border);font-size:.78rem;color:var(--muted)">
-<strong style="color:var(--text);display:block;margin-bottom:4px">Are you ready?</strong>
-Take the final test and aim for at least 75%.<br><span style="color:var(--primary)">Good luck!</span>
+<strong id="sidebarTitle" style="color:var(--text);display:block;margin-bottom:4px">Are you ready?</strong>
+<span id="sidebarSub">Take the final test and aim for at least 75%.</span><br><span id="sidebarCta" style="color:var(--primary)">Good luck!</span>
 </div>
 </aside>
 
@@ -167,7 +167,7 @@ Take the final test and aim for at least 75%.<br><span style="color:var(--primar
 <div class="search"><span style="color:var(--faint)">🔍</span><input id="searchInp" type="text" placeholder="Search topics..."></div>
 <div style="display:flex;gap:10px;align-items:center">
 <span class="chip" id="globalPct">0% complete</span>
-<button class="btn2 btnSm" id="resetBtn">Reset</button>
+<button class="btn2 btnSm" id="langBtn">🇮🇹 Italiano</button><button class="btn2 btnSm" id="resetBtn">Reset</button>
 </div>
 </header>
 
@@ -180,15 +180,15 @@ Take the final test and aim for at least 75%.<br><span style="color:var(--primar
 <div style="font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#ffd27a">SOC Analyst — Guida di studio interattiva</div>
 <h1 style="font-size:1.8rem;line-height:1.1;max-width:20ch">Everything you need to master SOC Analyst L1 skills: theory, trainers, realistic triage scenarios and a timed test.</h1>
 <p>Manual-ordering SOC triage, OSI exercises, MITRE ATT&CK, 100 ports and a timed final test.</p>
-<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="btn" href="#sec-triage">Go to triage scenarios</a><a class="btn2" href="#sec-final">Final test</a></div>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="btn" id="heroBtnTriage" href="#sec-triage">Go to triage scenarios</a><a class="btn2" id="heroBtnFinal" href="#sec-final">Final test</a></div>
 </div>
 <div class="panel card">
 <h2>Session Status</h2>
 <div class="g2">
-<div class="stat"><strong id="statScore">0</strong><span style="color:var(--muted);font-size:.8rem">Punti</span></div>
-<div class="stat"><strong id="statCorrect">0</strong><span style="color:var(--muted);font-size:.8rem">Correct</span></div>
-<div class="stat"><strong id="statModules">0/6</strong><span style="color:var(--muted);font-size:.8rem">Modules</span></div>
-<div class="stat"><strong id="statTriage">0/6</strong><span style="color:var(--muted);font-size:.8rem">Triage done</span></div>
+<div class="stat"><strong id="statScore">0</strong><span id="statScoreLbl" style="color:var(--muted);font-size:.8rem">Points</span></div>
+<div class="stat"><strong id="statCorrect">0</strong><span id="statCorrectLbl" style="color:var(--muted);font-size:.8rem">Correct</span></div>
+<div class="stat"><strong id="statModules">0/6</strong><span id="statModulesLbl" style="color:var(--muted);font-size:.8rem">Modules</span></div>
+<div class="stat"><strong id="statTriage">0/6</strong><span id="statTriageLbl" style="color:var(--muted);font-size:.8rem">Triage done</span></div>
 </div>
 </div>
 </div>
@@ -266,7 +266,7 @@ The attack happened but the SIEM didn't see it. This is why detection rules need
 </table>
 </div>
 <div style="padding:12px;border-radius:12px;background:rgba(90,160,173,.1);border:1px solid rgba(90,160,173,.3);font-size:.82rem;margin-bottom:14px">
-<strong style="color:var(--primary)">Mnemonic (bottom to top):</strong> <em>Per Dio Non Toccare Sistemi Per Amore</em> — Physical, Data Link, Network, Transport, Session, Presentation, Application
+<strong style="color:var(--primary)">Mnemonic (bottom to top):</strong> <em>Per Dio Non Should bere Sistemi Per Amore</em> — Physical, Data Link, Network, Transport, Session, Presentation, Application
 </div>
 <div class="g2">
 <div>
@@ -298,7 +298,7 @@ The attack happened but the SIEM didn't see it. This is why detection rules need
 <p>Generate a random subnet and answer how many usable hosts it has.</p>
 <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
 <span class="big" id="speedCidr">/26</span>
-<button class="btn" id="newSpeedBtn">Genera</button>
+<button class="btn" id="newSpeedBtn">Generate</button>
 </div>
 <div style="display:flex;gap:8px">
 <input class="inp" id="speedAns" placeholder="Usable hosts..." style="flex:1">
@@ -417,7 +417,7 @@ The attack happened but the SIEM didn't see it. This is why detection rules need
 <div id="quizTitle" style="font-size:1.1rem;font-weight:700;line-height:1.35">Select a module from the grid below to start the quiz.</div>
 <div id="quizAnswers" style="display:grid;gap:8px"></div>
 <div id="quizExplain" class="explain hidden"></div>
-<div style="display:flex;gap:8px"><button class="btn hidden" id="quizNext">Prossima</button><button class="btn2 hidden" id="quizBack">Back</button></div>
+<div style="display:flex;gap:8px"><button class="btn hidden" id="quizNext">Next</button><button class="btn2 hidden" id="quizBack">Back</button></div>
 </div>
 <div class="panel card">
 <h2>Modules</h2>
@@ -440,7 +440,7 @@ The attack happened but the SIEM didn't see it. This is why detection rules need
 <div id="finalQ" style="font-size:1.1rem;font-weight:700;line-height:1.35">Press "Start" to begin.</div>
 <div id="finalAnswers" style="display:grid;gap:8px"></div>
 <div id="finalExplain" class="explain hidden"></div>
-<div style="display:flex;gap:8px"><button class="btn" id="startFinalBtn">Start final test</button><button class="btn hidden" id="nextFinalBtn">Prossima</button><button class="btn2 hidden" id="restartFinalBtn">Restart</button></div>
+<div style="display:flex;gap:8px"><button class="btn" id="startFinalBtn">Start final test</button><button class="btn hidden" id="nextFinalBtn">Next</button><button class="btn2 hidden" id="restartFinalBtn">Restart</button></div>
 </div>
 <div class="panel card">
 <h2>Score</h2>
@@ -523,7 +523,7 @@ const done=Object.keys(st.modules).length;
 document.getElementById('statModules').textContent=done+'/6';
 document.getElementById('statTriage').textContent=(st.triageDone||0)+'/6';
 const pct=Math.round((st.score/600)*100);
-document.getElementById('globalPct').textContent=pct+'% complete';
+document.getElementById('globalPct').textContent=pct+getLang('globalPct');
 }
 updateStats();
 
@@ -545,11 +545,11 @@ btn.disabled=done;
 if(!done) btn.addEventListener('click',()=>{
 if(name===OSI_NAMES[osiStep]){
 osiStep++;
-document.getElementById('osiFeedback1').textContent='Corretto: '+name+' is Layer '+(idx+1)+'.';
+document.getElementById('osiFeedback1').textContent='Correct: '+name+' is Layer '+(idx+1)+'.';
 if(osiStep===7) document.getElementById('osiFeedback1').textContent='🎉 Perfetto! Hai ordinato tutti e 7 i livelli OSI.';
 }else{
 osiStep=0;
-document.getElementById('osiFeedback1').textContent='Sbagliato. Tocca '+OSI_NAMES[0]+' (Layer 1). Rimescolato.';
+document.getElementById('osiFeedback1').textContent='Wrong. Should be '+OSI_NAMES[0]+' (Layer 1). Shuffled.';
 }
 document.getElementById('osiProgress1').textContent=osiStep+' / 7';
 renderOsi1();
@@ -558,7 +558,7 @@ el.appendChild(btn);
 });
 }
 renderOsi1();
-document.getElementById('osiReset1').addEventListener('click',()=>{osiStep=0;document.getElementById('osiProgress1').textContent='0 / 7';document.getElementById('osiFeedback1').textContent='Clicca i livelli in ordine crescente.';renderOsi1();});
+document.getElementById('osiReset1').addEventListener('click',()=>{osiStep=0;document.getElementById('osiProgress1').textContent='0 / 7';document.getElementById('osiFeedback1').textContent='Click the layers in ascending order.';renderOsi1();});
 
 // ── OSI EXERCISE 2 — WHICH LAYER ──────────────────────────────────────
 const osiQ2=[
@@ -587,7 +587,7 @@ const correct=parseInt(btn.dataset.correct);
 const fb=document.getElementById('osiQ2Fb');
 el.querySelectorAll('.osi-q2-btn').forEach(b=>b.disabled=true);
 if(chosen===correct){btn.classList.add('osi-correct');fb.textContent='✅ Corretto! '+item.item+' is Layer '+correct+' ('+OSI_NAMES[correct-1]+')';}
-else{btn.classList.add('osi-wrong');el.querySelector('[data-layer="'+correct+'"]').classList.add('osi-correct');fb.textContent='❌ Era Layer '+correct+' — '+OSI_NAMES[correct-1]+'. '+item.item;}
+else{btn.classList.add('osi-wrong');el.querySelector('[data-layer="'+correct+'"]').classList.add('osi-correct');fb.textContent=(currentLang==='it'?'❌ Era Layer ':'❌ Wrong — Layer ')+correct+' ('+OSI_NAMES[correct-1]+'). '+item.item;;}
 });
 });
 }
@@ -619,7 +619,7 @@ const last=c>=31?n2ip(net+total-1):n2ip(net+total-2);
 const broad=n2ip(net+total-1);
 const guess=parseInt(document.getElementById('cidrGuess').value||'-1');
 const ok=guess===usz;
-document.getElementById('cidrResult').innerHTML=`<strong>${base}/${c}</strong> ${document.getElementById('cidrGuess').value?(ok?'✅':'❌ era '+usz):''}<br>Usable hosts: <strong>${usz}</strong><br>First host: ${first} | Last host: ${last}<br>Broadcast: ${broad} | Block: ${total} addresses`;
+document.getElementById('cidrResult').innerHTML=`<strong>${base}/${c}</strong> ${document.getElementById('cidrGuess').value?(ok?'✅':'❌ was '+usz):''}<br>Usable hosts: <strong>${usz}</strong><br>First host: ${first} | Last host: ${last}<br>Broadcast: ${broad} | Block: ${total} addresses`;
 });
 
 // ── TCP vs UDP SCENARIOS ───────────────────────────────────────────────
@@ -645,7 +645,7 @@ function checkTcp(choice){
 const s=TCP_SCENARIOS[tcpIdx];const ok=choice===s.answer;
 if(ok)tcpCorrect++;tcpTotal++;
 document.getElementById('tcpResult').innerHTML=(ok?'✅ Giusto! ':'❌ Era '+s.answer+'. ')+s.explain;
-document.getElementById('tcpScore').textContent=tcpCorrect+' correct out of '+tcpTotal;
+document.getElementById('tcpScore').textContent=tcpCorrect+' '+getLang('tcpPh')+' '+tcpTotal;
 document.getElementById('pickTcp').disabled=true;document.getElementById('pickUdp').disabled=true;
 }
 document.getElementById('newTcpBtn').addEventListener('click',newTcp);
@@ -745,7 +745,7 @@ renderTriage();
 grid.querySelectorAll('[data-submit]').forEach(btn=>{
 btn.addEventListener('click',()=>{
 const id=btn.dataset.submit;const sc2=TRIAGE.find(s=>s.id===id);const ts3=triageState[id];
-if(ts3.selected.length!==sc2.steps.length){alert('Seleziona tutti i '+sc2.steps.length+' passi prima di verificare.');return;}
+if(ts3.selected.length!==sc2.steps.length){alert(getLang('selectAll')+sc2.steps.length+getLang('selectAllEnd'));return;}
 ts3.done=true;
 ts3.correct=ts3.selected.every((s,i)=>s===sc2.steps[i]);
 renderTriage();
@@ -915,14 +915,14 @@ const MODULES=[
 {q:'Quale porta usa DNS?',opts:['80','443','53','22'],a:2,ex:'DNS uses port 53, usually UDP and sometimes TCP.'},
 {q:'DHCP usa principalmente...',opts:['TCP','UDP','ICMP','IP diretto'],a:1,ex:'DHCP uses UDP on ports 67/68.'},
 {q:'Una /30 quanti host utilizzabili ha?',opts:['6','4','2','30'],a:2,ex:'2^2=4-2=2. Usato per link punto-punto.'},
-{q:'Quale dispositivo opera a Layer 2?',opts:['Router','Switch L2','Firewall','IPS'],a:1,ex:'An L2 switch works with MAC addresses.'},
+{q:'Quale dispositivo opwas a Layer 2?',opts:['Router','Switch L2','Firewall','IPS'],a:1,ex:'An L2 switch works with MAC addresses.'},
 {q:'ARP serve a...',opts:['Risolvere nomi DNS','Mappare IP su MAC','Assegnare IP','Cifrare il traffico'],a:1,ex:'ARP risolve addresses IP in MAC address sulla LAN.'},
 ]},
 {id:'soc',label:'SOC Operations',tag:'p1',questions:[
 {q:'Prima azione su host con beacon C2 attivo?',opts:['Spegnere','Isolare dalla rete senza spegnere','Formattare','Riavviare'],a:1,ex:'The machine is isolated while keeping it on to preserve RAM artefacts.'},
 {q:'Falso negativo in un SOC significa...',opts:['Alert su evento inesistente','Attacco reale non rilevato','Alert chiuso correttamente','Regola troppo rumorosa'],a:1,ex:'FN è il caso peggiore: l\'attacco c\'è ma il SIEM non l\'ha visto.'},
 {q:'SIEM sta per...',opts:['Security Info and Event Mgmt','System Intrusion Endpoint Module','Secure Internal Email Mgr','Signal Inspection Engine'],a:0,ex:'SIEM centralises and correlates events from multiple sources.'},
-{q:'When to escalate to L2?',opts:['Sempre','Mai','Quando il caso supera le competenze L1','Solo di notte'],a:2,ex:'L2 steps in when deeper analysis or advanced containment is required.'},
+{q:'When to escalate to L2?',opts:['Sempre','Mai','Quando il caso supwas le competenze L1','Solo di notte'],a:2,ex:'L2 steps in when deeper analysis or advanced containment is required.'},
 {q:'Nel phishing triage si guarda principalmente...',opts:['Solo il logo','Mittente, header, link, allegati','Il font','Il colore dei link'],a:1,ex:'Technical indicators are needed: SPF/DKIM, URL reputation, attachment hashes.'},
 {q:'EDR significa...',opts:['Endpoint Detection and Response','External Data Routing','Event Defensive Router','Extended DNS Relay'],a:0,ex:'EDR provides visibility and response capabilities on endpoints.'},
 {q:'L\'obiettivo principale del triage è...',opts:['Installare antivirus','Classificare e prioritizzare alert','Fare backup','Scrivere policy'],a:1,ex:'Il triage determina se un alert è reale, quanto è grave e what fare.'},
@@ -935,7 +935,7 @@ const MODULES=[
 {q:'AAA in sicurezza significa...',opts:['Authentication Authorization Accounting','Anti-Access Algorithm','Auto Alert Agent','Active Audit Anomaly'],a:0,ex:'AAA = chi sei, what puoi fare, what hai fatto.'},
 {q:'Stateful firewall...',opts:['Filtra solo per IP','Traccia lo stato delle connessioni','Analizza il payload HTTP','Sostituisce l\'IDS'],a:1,ex:'A stateful firewall knows whether a packet belongs to an open session.'},
 {q:'Cifratura asimmetrica usa...',opts:['Una chiave sola','Chiave pubblica e privata','Solo hash','Nessuna chiave'],a:1,ex:'Asymmetric: public key to encrypt, private key to decrypt.'},
-{q:'Un WAF opera principalmente a...',opts:['Layer 1','Layer 3','Layer 4','Layer 7'],a:3,ex:'WAF analyses HTTP/HTTPS at the application layer (7).'},
+{q:'Un WAF opwas principalmente a...',opts:['Layer 1','Layer 3','Layer 4','Layer 7'],a:3,ex:'WAF analyses HTTP/HTTPS at the application layer (7).'},
 {q:'VPN crea principalmente...',opts:['Un indirizzo IP pubblico','Un canale cifrato tra client e server','Un firewall perimetrale','Un proxy DNS'],a:1,ex:'VPN encapsulates traffic in an encrypted tunnel.'},
 ]},
 {id:'threat',label:'Threats & Attacks',tag:'p2',questions:[
@@ -1001,18 +1001,23 @@ document.getElementById('quizNext').classList.add('hidden');
 document.getElementById('quizBack').classList.add('hidden');
 qAnswered=false;
 const el=document.getElementById('quizAnswers');el.innerHTML='';
-item.opts.forEach((opt,i)=>{
+// Shuffle options while tracking correct answer
+const idxArr=item.opts.map((_,i)=>i);
+for(let i=idxArr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[idxArr[i],idxArr[j]]=[idxArr[j],idxArr[i]];}
+const shuffledOpts=idxArr.map(i=>item.opts[i]);
+const newCorrect=idxArr.indexOf(item.a);
+shuffledOpts.forEach((opt,i)=>{
 const btn=document.createElement('button');
 btn.className='answer-btn';btn.textContent=opt;
 btn.addEventListener('click',()=>{
 if(qAnswered)return;qAnswered=true;
-el.querySelectorAll('.answer-btn').forEach((b,j)=>{b.disabled=true;if(j===item.a)b.classList.add('correct');if(j===i&&i!==item.a)b.classList.add('wrong');});
-const ok=i===item.a;
+el.querySelectorAll('.answer-btn').forEach((b,j)=>{b.disabled=true;if(j===newCorrect)b.classList.add('correct');if(j===i&&i!==newCorrect)b.classList.add('wrong');});
+const ok=i===newCorrect;
 if(ok){st.score+=10;st.correct++;}
 const pct=Math.round(((activeQ+1)/m.questions.length)*100);
 st.modules[m.id]=Math.max(st.modules[m.id]||0,pct);
 updateStats();saveSt();renderModuleGrid();
-document.getElementById('quizExplain').textContent=item.ex+(ok?' +10 punti ✅':' ❌');
+document.getElementById('quizExplain').textContent=item.ex+(ok?' +10 pts ✅':' ❌');
 document.getElementById('quizExplain').classList.remove('hidden');
 if(activeQ<m.questions.length-1) document.getElementById('quizNext').classList.remove('hidden');
 else document.getElementById('quizBack').classList.remove('hidden');
@@ -1026,7 +1031,7 @@ document.getElementById('quizBack').addEventListener('click',()=>document.getEle
 // ── FINAL EXAM WITH TIMER ─────────────────────────────────────────────
 const ALL_Q=MODULES.flatMap(m=>m.questions.map(q=>({...q,module:m.label})));
 let finalQ=[],finalIdx=0,finalScore2=0,finalReviewItems=[],fAnswered=false,timerInt=null,timerSec=20;
-function levelFromPct(p){if(p>=90)return'Ready ✅';if(p>=75)return'Almost ready 👍';if(p>=60)return'Review more ⚠️';return'Needs work ❌';}
+function levelFromPct(p){if(p>=90)return getLang('ready');if(p>=75)return getLang('almost');if(p>=60)return getLang('review');return getLang('needs');}
 function startTimer(){
 clearInterval(timerInt);timerSec=20;
 document.getElementById('timerSection').classList.remove('hidden');
@@ -1047,7 +1052,7 @@ fAnswered=true;
 const item=finalQ[finalIdx];
 document.getElementById('finalAnswers').querySelectorAll('.answer-btn').forEach((b,i)=>{b.disabled=true;if(i===item.a)b.classList.add('correct');});
 finalReviewItems.push({q:item.q,ok:false});
-document.getElementById('finalExplain').textContent='⏰ Tempo! '+item.ex;
+document.getElementById('finalExplain').textContent=currentLang==='it'?'⏰ Tempo! ':'⏰ Time up! '+item.ex;
 document.getElementById('finalExplain').classList.remove('hidden');
 refreshFinalStats();
 if(finalIdx<finalQ.length-1) document.getElementById('nextFinalBtn').classList.remove('hidden');
@@ -1062,13 +1067,18 @@ document.getElementById('finalExplain').className='explain hidden';
 document.getElementById('nextFinalBtn').classList.add('hidden');
 document.getElementById('restartFinalBtn').classList.add('hidden');
 fAnswered=false;
-item.opts.forEach((opt,i)=>{
+// Shuffle options for final exam
+const fIdxArr=item.opts.map((_,i)=>i);
+for(let i=fIdxArr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[fIdxArr[i],fIdxArr[j]]=[fIdxArr[j],fIdxArr[i]];}
+const fShuffled=fIdxArr.map(i=>item.opts[i]);
+const fNewCorrect=fIdxArr.indexOf(item.a);
+fShuffled.forEach((opt,i)=>{
 const btn=document.createElement('button');
 btn.className='answer-btn';btn.textContent=opt;
 btn.addEventListener('click',()=>{
 if(fAnswered)return;clearInterval(timerInt);fAnswered=true;
-document.getElementById('finalAnswers').querySelectorAll('.answer-btn').forEach((b,j)=>{b.disabled=true;if(j===item.a)b.classList.add('correct');if(j===i&&i!==item.a)b.classList.add('wrong');});
-const ok=i===item.a;if(ok)finalScore2++;
+document.getElementById('finalAnswers').querySelectorAll('.answer-btn').forEach((b,j)=>{b.disabled=true;if(j===fNewCorrect)b.classList.add('correct');if(j===i&&i!==fNewCorrect)b.classList.add('wrong');});
+const ok=i===fNewCorrect;if(ok)finalScore2++;
 finalReviewItems.push({q:item.q,ok});
 document.getElementById('finalExplain').textContent=item.ex+(ok?' ✅':' ❌');
 document.getElementById('finalExplain').classList.remove('hidden');
@@ -1118,5 +1128,131 @@ if(el&&el.textContent.toLowerCase().includes(q)){el.scrollIntoView({behavior:'sm
 });
 
 </script>
+
+<script>
+// ── LANGUAGE SWITCHER ──────────────────────────────────────────────────
+const LANGS = {
+  en: {
+    langBtn: '🇮🇹 Italiano',
+    title: 'SOC Analyst Prep — Interactive Learning Tool',
+    heroEyebrow: 'SOC Analyst — Interactive Learning Hub',
+    heroTitle: 'Theory, interactive trainers, realistic triage and timed test.',
+    heroSub: 'Manual-ordering SOC triage, OSI exercises, MITRE ATT&CK, 100 ports and timed final test.',
+    btnTriage: 'Go to triage scenarios',
+    btnFinal: 'Final test',
+    statScore: 'Points', statCorrect: 'Correct', statModules: 'Modules', statTriage: 'Triage done',
+    navTriage: '🔍 How triage works', navOsi: '🧱 OSI Model', navTrainer: '🎯 CIDR / TCP-UDP Trainer',
+    navTriageS: '🚨 SOC Triage Scenarios', navMitre: '🗺 MITRE ATT&CK', navPorts: '🔌 100 Ports',
+    navQuiz: '📝 Module Quiz', navFinal: '⏱ Final Test', navReview: '✅ Final Checklist',
+    globalPct: '% complete', resetBtn: 'Reset',
+    searchPh: 'Search topics...',
+    sidebarTitle: 'Are you ready?', sidebarSub: 'Take the final test and aim for at least 75%.', sidebarCta: 'Good luck!',
+    checkOrder: 'Check order', undoLast: 'Undo last', retry: 'Retry',
+    generate: 'Generate', checkBtn: 'Check',
+    tcpNext: 'Next scenario', tcpPh: 'correct out of',
+    startFinal: 'Start final test', nextFinal: 'Next', restartFinal: 'Restart',
+    portAll: 'All', portRemote: 'Remote access', portNet: 'Network', portDanger: '⚠ Dangerous',
+    ready: 'Ready ✅', almost: 'Almost ready 👍', review: 'Review more ⚠️', needs: 'Needs work ❌',
+    osiShuffle: 'Shuffle', osiNext: 'Next',
+    quizNext: 'Next', quizBack: 'Back',
+    selectAll: 'Please select all ',
+    selectAllEnd: ' steps before checking.',
+  },
+  it: {
+    langBtn: '🇬🇧 English',
+    title: 'SOC Analyst Prep — Strumento di apprendimento',
+    heroEyebrow: 'SOC Analyst — Hub di apprendimento interattivo',
+    heroTitle: 'Teoria, trainer interattivi, triage realistico e test cronometrato.',
+    heroSub: 'Triage SOC con ordinamento manuale, OSI con esercizi, MITRE ATT&CK, 100 porte e test con timer.',
+    btnTriage: 'Vai ai scenari triage',
+    btnFinal: 'Test finale',
+    statScore: 'Punti', statCorrect: 'Corrette', statModules: 'Moduli', statTriage: 'Triage ok',
+    navTriage: '🔍 Come funziona il triage', navOsi: '🧱 Modello OSI', navTrainer: '🎯 Trainer CIDR / TCP-UDP',
+    navTriageS: '🚨 Triage SOC scenari', navMitre: '🗺 MITRE ATT&CK', navPorts: '🔌 100 Porte',
+    navQuiz: '📝 Quiz moduli', navFinal: '⏱ Test finale', navReview: '✅ Checklist finale',
+    globalPct: '% completato', resetBtn: 'Reset',
+    searchPh: 'Cerca argomenti...',
+    sidebarTitle: 'Sei pronto?', sidebarSub: 'Fai il test finale e punta almeno al 75%.', sidebarCta: 'In bocca al lupo!',
+    checkOrder: 'Verifica ordine', undoLast: 'Annulla ultimo', retry: 'Riprova',
+    generate: 'Genera', checkBtn: 'Controlla',
+    tcpNext: 'Prossimo scenario', tcpPh: 'corretti su',
+    startFinal: 'Inizia test finale', nextFinal: 'Prossima', restartFinal: 'Ricomincia',
+    portAll: 'Tutte', portRemote: 'Accesso remoto', portNet: 'Rete', portDanger: '⚠ Pericolose',
+    ready: 'Pronto ✅', almost: 'Quasi pronto 👍', review: 'Ripassa ⚠️', needs: 'Da rinforzare ❌',
+    osiShuffle: 'Mescola', osiNext: 'Prossimo',
+    quizNext: 'Prossima', quizBack: 'Torna',
+    selectAll: 'Seleziona tutti i ',
+    selectAllEnd: ' passi prima di verificare.',
+  }
+};
+
+let currentLang = localStorage.getItem('socLang') || 'en';
+
+function applyLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('socLang', lang);
+  const L = LANGS[lang];
+  document.title = L.title;
+  // lang button
+  const lb = document.getElementById('langBtn');
+  if(lb) lb.textContent = L.langBtn;
+  // nav
+  const navMap = {
+    'nav-triage-how': L.navTriage, 'nav-osi': L.navOsi, 'nav-trainer': L.navTrainer,
+    'nav-triage': L.navTriageS, 'nav-mitre': L.navMitre, 'nav-ports': L.navPorts,
+    'nav-quiz': L.navQuiz, 'nav-final': L.navFinal, 'nav-review': L.navReview,
+  };
+  Object.entries(navMap).forEach(([id,txt])=>{const el=document.getElementById(id);if(el)el.textContent=txt;});
+  // stats labels
+  const statsMap = {'statScoreLbl':L.statScore,'statCorrectLbl':L.statCorrect,'statModulesLbl':L.statModules,'statTriageLbl':L.statTriage};
+  Object.entries(statsMap).forEach(([id,txt])=>{const el=document.getElementById(id);if(el)el.textContent=txt;});
+  // global pct
+  updateStats();
+  // search
+  const si = document.getElementById('searchInp');
+  if(si) si.placeholder = L.searchPh;
+  // reset
+  const rb = document.getElementById('resetBtn');
+  if(rb) rb.textContent = L.resetBtn;
+  // sidebar
+  const st=document.getElementById('sidebarTitle');if(st)st.textContent=L.sidebarTitle;
+  const ss=document.getElementById('sidebarSub');if(ss)ss.textContent=L.sidebarSub;
+  const sc=document.getElementById('sidebarCta');if(sc)sc.textContent=L.sidebarCta;
+  // buttons
+  const btnMap={'newSpeedBtn':L.generate,'checkSpeedBtn':L.checkBtn,'checkCidrBtn':L.checkBtn,
+    'newTcpBtn':L.tcpNext,'startFinalBtn':L.startFinal,'nextFinalBtn':L.nextFinal,'restartFinalBtn':L.restartFinal,
+    'osiReset1':L.osiShuffle,'osiNew2':L.osiNext,'quizNext':L.quizNext,'quizBack':L.quizBack};
+  Object.entries(btnMap).forEach(([id,txt])=>{const el=document.getElementById(id);if(el)el.textContent=txt;});
+  // port filter
+  const pf=document.getElementById('portFilter');
+  if(pf){
+    pf.querySelectorAll('button').forEach(b=>{
+      const cat=b.dataset.cat;
+      if(cat==='all')b.textContent=L.portAll;
+      else if(cat==='remote')b.textContent=L.portRemote;
+      else if(cat==='net')b.textContent=L.portNet;
+      else if(cat==='danger')b.textContent=L.portDanger;
+    });
+  }
+  // triage buttons (re-render)
+  renderTriage();
+  // hero
+  const he=document.getElementById('heroEyebrow');if(he)he.textContent=L.heroEyebrow;
+  const ht=document.getElementById('heroTitle');if(ht)ht.textContent=L.heroTitle;
+  const hs=document.getElementById('heroSub');if(hs)hs.textContent=L.heroSub;
+  const hbt=document.getElementById('heroBtnTriage');if(hbt)hbt.textContent=L.btnTriage;
+  const hbf=document.getElementById('heroBtnFinal');if(hbf)hbf.textContent=L.btnFinal;
+}
+
+function getLang(key){ return LANGS[currentLang][key] || LANGS['en'][key]; }
+
+// ── LANG BUTTON ──────────────────────────────────────────────────────
+document.getElementById('langBtn').addEventListener('click',()=>{
+  applyLang(currentLang==='en'?'it':'en');
+});
+// Apply saved language on load
+if(currentLang==='it') applyLang('it');
+</script>
+
 </body>
 </html>
